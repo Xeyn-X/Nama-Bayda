@@ -1,7 +1,8 @@
 streamlit
 pandas
 numpy
-matplotlib
+pickle
+re
 joblib
 scikit-learn
 
