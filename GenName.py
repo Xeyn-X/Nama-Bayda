@@ -16,12 +16,12 @@ def gender_detect(name):
     inputs = [re.sub(r'(?:(?<!္)([က-ဪဿ၊-၏]|[၀-၉]+|[^က-၏]+)(?![ှျ]?[့္်]))', r' \1', i) for i in inputs]
 
     # Load the tokenizer
-    with open('/Users/heinhtetarkarmg/Downloads/tokenizer.pkl', 'rb') as f:
+    with open('./tokenizer.pkl', 'rb') as f:
         tokenizer = pickle.load(f)
                            
     testing_sequences = tokenizer.texts_to_sequences(inputs)
     testing_padded = pad_sequences(testing_sequences,maxlen=9, truncating='post',padding='post')
-    gender = tf.keras.models.load_model('/Users/heinhtetarkarmg/Downloads/name_gender.keras')
+    gender = tf.keras.models.load_model('./name_gender.keras')
     
     ans = gender.predict(testing_padded)
     
@@ -97,17 +97,17 @@ def generate_names():
 
 
 
-with open("/Users/heinhtetarkarmg/Downloads/concat_names.pkl", "rb") as file:
+with open("./concat_names.pkl", "rb") as file:
     concat_names = pickle.load(file)
 
-with open("/Users/heinhtetarkarmg/Downloads/word_index.pkl", "rb") as file:
+with open("./word_index.pkl", "rb") as file:
     word_index = pickle.load(file)
 
-with open("/Users/heinhtetarkarmg/Downloads/sequences_no_zeros.pkl", "rb") as file:
+with open("./sequences_no_zeros.pkl", "rb") as file:
     sequences_no_zeros = pickle.load(file)
     
 # Assuming you have saved the model at 'path_to_model'
-model_path = '/Users/heinhtetarkarmg/Downloads/BurmeseNameGen.keras'
+model_path = './BurmeseNameGen.keras'
 
 # Load the model without custom CTC loss
 model = tf.keras.models.load_model(model_path)
