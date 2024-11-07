@@ -79,6 +79,7 @@ part_data = {
     'တိမ်လွှာ': 'Cloud',
     'ပတ္တမြား': 'Ruby',
     'ရာဇာ': 'King',
+    'ဧကရီ': 'Queen',
 }
 
 form = st.form("my_form")
