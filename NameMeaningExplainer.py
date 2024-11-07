@@ -28,7 +28,7 @@ def check_name_meaning(name, data):
     return result
         
 # Load data from JSON file
-with open('/Users/heinhtetarkarmg/Downloads/Burmese_Name_Meaning.json', 'r', encoding='utf-8') as file:
+with open('./Burmese_Name_Meaning.json', 'r', encoding='utf-8') as file:
     meaning_data = json.load(file)
     
 part_data = {
