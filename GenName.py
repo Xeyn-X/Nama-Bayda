@@ -6,6 +6,7 @@ import pandas as pd
 import pickle
 import random
 import re
+from re import search
 import json
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -90,7 +91,7 @@ def generate_names():
                     # Join words into a single string
                     result = "".join(words)
 
-                    if gender_detect(result) == gen:
+                    if gender_detect(result) == st.session_state.selected_gender:
                         
                         return check_name_meaning(result, meaning_data)
                     else:
@@ -105,6 +106,12 @@ def check_name_meaning(name, data):
     name_parts = name_syllable.split()
     meanings = []  # List to store meanings
     
+    # Loop through each part of the name and check if it exists in the data
+    for part in part_data:
+        if search(part, name):  # Check if part is found in the name using regex search
+            if part_data[part] not in meanings:  # Add meaning if not a duplicate
+                meanings.append(part_data[part])
+    
     # Loop through each part of the name
     for part in name_parts:
         if part in data:  # Check if part has a meaning in the dictionary
@@ -118,6 +125,55 @@ def check_name_meaning(name, data):
 # Load data from JSON file
 with open('./Burmese_Name_Meaning.json', 'r', encoding='utf-8') as file:
     meaning_data = json.load(file)
+
+part_data = {
+    'မြင့်မြတ်': 'Noble',
+    'သူရိန်': 'Sun',
+    'သူရ': 'Bravery',
+    'စိုးမိုး': 'Power',
+    'သီဟ': 'lion',
+    'သီရိ': 'Glory',
+    'သီတာ': 'Royal Princess',
+    'ဇာနည်': 'Bravery',
+    'ဇာခြည်': 'Sunlight',
+    'သဇင်': 'Royal Flower',
+    'သခင်': 'Master',
+    'မာလာ': 'Necklace of Flower',
+    'နီလာ': 'Sapphire',
+    'ယမင်း': 'Princess',
+    'ယမုံ': 'Feminine',
+    'ဝတ်ရည်': 'Nectar',
+    'ဝတ်မှုံ': 'Pollen',
+    'ဝတ်လွှာ': 'Petal',
+    'လမင်း': 'Moon',
+    'လပြည့်': 'Moon',
+    'လဝန်း': 'Moon',
+    'ဝေယံ': 'Sky',
+    'ဇေယျာ': 'Victory',
+    'ဇေယျ': 'Victory',
+    'နေခြည်': 'Sun light',
+    'စည်သူ': 'Honorable',
+    'ဟေမန်': 'Winter',
+    'ရတနာ': 'Treasure',
+    'အာကာ': 'Space',
+    'ချယ်ရီ': 'Cherry',
+    'သုခ': 'Pleasure',
+    'သုတ': 'Wisdom',
+    'ကလျာ': 'Womanly virtues',
+    'အင်ကြင်း': 'Sal tree',
+    'စံပယ်': 'Jasmine',
+    'ငုဝါ': 'Flower',
+    'ဗညား': 'Royal',
+    'ဂျူလိုင်': 'July',
+    'ဇူလိုင်': 'July',
+    'ဝသုန်': 'Earth',
+    'ဝသန်': 'Rain',
+    'ဆည်းဆာ': 'Sunset',
+    'ပုလဲ': 'Pearl',
+    'ကံ့ကော်': 'Flower',
+    'တိမ်လွှာ': 'Cloud',
+    'ပတ္တမြား': 'Ruby',
+}
 
 
 with open("./concat_names.pkl", "rb") as file:
@@ -135,19 +191,28 @@ model_path = './BurmeseNameGen.keras'
 # Load the model without custom CTC loss
 model = tf.keras.models.load_model(model_path)
 
+def nameGen():
+    form = st.form("my_form")
+    form.markdown("<spam style='font-size:30px; font-weight:bold;'>Burmese Name Generator</spam>", unsafe_allow_html=True)
+    number = form.number_input("Generated Name Count", step=1)
+    gen = form.selectbox(
+            "Select Gender",
+            ["Male", 
+        "Female"
+        ],key="selected_gender")
+    
+    button = form.form_submit_button("Generate", type="primary")
+    form.markdown(":gray[<p style='font-size:12px;'>Copyright © 2024 Hein Htet Arkar Mg</p>]", unsafe_allow_html=True)
+    if button:
+        for _ in range(number):
+            st.markdown(f"""<div style='text-align: center;'><span style='font-size:16px;'> {generate_names()}</span></div>""", unsafe_allow_html=True)
 
-form = st.form("my_form")
-form.title("Burmese Name Generator")
-number = form.number_input("Generated Name Count", step=1)
-gen = form.selectbox(
-        "Select Gender",
-        ["Male", 
-    "Female"
-    ])
+st.markdown("<div style='text-align:center;  padding-bottom: 30px;'><spam style='font-size:45px; font-weight:bold;'>Nama Bayda</spam><spam style='font-size:25px; font-weight:bold; color: gray;'> (နာမဗေဒ)</spam></div>", unsafe_allow_html=True)
 
-button = form.form_submit_button("Generate", type="primary")
-form.markdown(":gray[<p style='font-size:12px;'>Copyright © 2024 Hein Htet Arkar Mg</p>]", unsafe_allow_html=True)
-if button:
-    for _ in range(number):
-        st.markdown(f"""<div style='text-align: center;'><span style='font-size:16px;'> {generate_names()}</span></div>""", unsafe_allow_html=True)
+pages= {"Nama Bayda (နာမဗေဒ)":[st.Page(nameGen,title="Burmese Name Generator"), st.Page("./GenderDectector.py",title="Gender Detector"),
+st.Page("./NameMeaningExplainer.py",title="Name Meaning Explainer")]}
+pg = st.navigation(pages)
+pg.run()
+
+
     
