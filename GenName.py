@@ -6,6 +6,7 @@ import pandas as pd
 import pickle
 import random
 import re
+import json
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
@@ -90,11 +91,33 @@ def generate_names():
                     result = "".join(words)
 
                     if gender_detect(result) == gen:
-                        return result
+                        
+                        return check_name_meaning(result, meaning_data)
                     else:
                         return generate_names()
                         
 
+# Function to check the meaning of each part of the name
+def check_name_meaning(name, data):
+    name_syllable = re.sub(r'(?:(?<!္)([က-ဪဿ၊-၏]|[၀-၉]+|[^က-၏]+)(?![ှျ]?[့္်]))', r' \1', name)
+    
+    # Split the Burmese name by each word
+    name_parts = name_syllable.split()
+    meanings = []  # List to store meanings
+    
+    # Loop through each part of the name
+    for part in name_parts:
+        if part in data:  # Check if part has a meaning in the dictionary
+            if data[part] not in meanings:  # Add meaning if not a duplicate
+                meanings.append(data[part])
+       
+    # Format the result as a comma-separated string
+    result = f"{name}  <span style='color:orange;'>({', '.join(meanings)})</span>" if meanings else "(None)"
+    return result
+        
+# Load data from JSON file
+with open('./Burmese_Name_Meaning.json', 'r', encoding='utf-8') as file:
+    meaning_data = json.load(file)
 
 
 with open("./concat_names.pkl", "rb") as file:
@@ -113,7 +136,6 @@ model_path = './BurmeseNameGen.keras'
 model = tf.keras.models.load_model(model_path)
 
 
-
 form = st.form("my_form")
 form.title("Burmese Name Generator")
 number = form.number_input("Generated Name Count", step=1)
@@ -127,4 +149,5 @@ button = form.form_submit_button("Generate", type="primary")
 form.markdown(":gray[<p style='font-size:12px;'>Copyright © 2024 Hein Htet Arkar Mg</p>]", unsafe_allow_html=True)
 if button:
     for _ in range(number):
-        st.write(generate_names())
+        st.markdown(f"""<div style='text-align: center;'><span style='font-size:16px;'> {generate_names()}</span></div>""", unsafe_allow_html=True)
+    
