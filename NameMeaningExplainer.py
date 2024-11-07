@@ -78,6 +78,7 @@ part_data = {
     'ကံ့ကော်': 'Flower',
     'တိမ်လွှာ': 'Cloud',
     'ပတ္တမြား': 'Ruby',
+    'ရာဇာ': 'King',
 }
 
 form = st.form("my_form")
