@@ -198,7 +198,7 @@ if button:
         title.markdown(f"""<div ><span style='color:orange; font-size:16px;'>Possible Names:</span></div>""", unsafe_allow_html=True)
         for e_name in output_names:
             ans.markdown(f"""<div ><span style='font-size:16px;'> {e_name}</span></div>""", unsafe_allow_html=True)
-        st.markdown(f"""<div ><span style='color: red; font-size:16px; padding-top:30px;'>*** Notes: English လို Convert ရာတွင် တချို့သော နာမည်များသည် စာလုံးများတူနေသောကြောင့် ဖြစ်နိုင်သောနာမည်များကိုထုတ်ပြပေးထားသည်။ **</span></div>""", unsafe_allow_html=True)
+        st.markdown(f"""<div ><span style='color: red; font-size:16px; padding-top:100px;'>*** Notes: English လို Convert ရာတွင် တချို့သော နာမည်များသည် စာလုံးများတူနေသောကြောင့် ဖြစ်နိုင်သောနာမည်များကိုထုတ်ပြပေးထားသည်။ **</span></div>""", unsafe_allow_html=True)
             
         
         
