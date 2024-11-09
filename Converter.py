@@ -5,7 +5,7 @@ from itertools import product
 
 # Load data from CSV file
 data = {}
-covverter_csv = '/Users/heinhtetarkarmg/Downloads/Converter.csv'
+covverter_csv = './Converter.csv'
 with open(covverter_csv, 'r', encoding='utf-8') as file:
     reader = csv.reader(file)
     next(reader)  # Skip header row if there is one
@@ -15,7 +15,7 @@ with open(covverter_csv, 'r', encoding='utf-8') as file:
 
 # Load data from CSV file
 special_name = {}
-with open('/Users/heinhtetarkarmg/Downloads/SpecialName.csv', 'r', encoding='utf-8') as file:
+with open('./SpecialName.csv', 'r', encoding='utf-8') as file:
     reader = csv.reader(file)
     next(reader)  # Skip header row if there is one
     for row in reader:
