@@ -192,7 +192,7 @@ form.markdown(":gray[<p style='font-size:12px;'>Copyright © 2024 Hein Htet Arka
 if button:
     if st.session_state.left_language == 'Burmese':
         st.markdown(f"""<div ><span style='font-size:16px;'> {check_name_meaning(name, data)}</span></div>""", unsafe_allow_html=True)
-         st.markdown(f"""<div style='padding-top:50px;'><span style='color: red; font-size:16px;'>*** Notes: ငသတ်( ် ) ရေးပြီးမှ အောက်ကမြစ်( ့ ) ကိုရေးပါ။ **</span></div>""", unsafe_allow_html=True)
+        st.markdown(f"""<div style='padding-top:50px;'><span style='color: red; font-size:16px;'>*** Notes: ငသတ်( ် ) ရေးပြီးမှ အောက်ကမြစ်( ့ ) ကိုရေးပါ။ **</span></div>""", unsafe_allow_html=True)
     else:
         output_names = convert_name_to_burmese(name, translation_dict)
         title, ans,blank = st.columns(3)
