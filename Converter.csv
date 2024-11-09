@@ -9,7 +9,7 @@ Burmese,English
 အာကာ,Arkar
 အား,Arr
 အောင်,Aung
-အောင်း,Aungg
+အောင်း,Aung
 အံ့,Aunt
 ဧရာ,Ayar
 အေး,Aye
@@ -122,7 +122,6 @@ Burmese,English
 ခ,Kha
 ခမ်း,Khan
 ခန့်,Khant
-ခန့်,Khant
 ခတ္တာ,Khattar
 ခေါင်,Khaung
 ခက်,Khet
@@ -156,7 +155,6 @@ Burmese,English
 လာဘ်,Lab
 လဲ့,Lae
 လဲ,Le
-လမင်း,Lamin
 လမင်း,Lamin
 လာ,Lar
 လတ်,Lat
@@ -203,9 +201,7 @@ Burmese,English
 မျက်,Myet
 မြင်,Myin
 မြိုင်,Myine
-မြင့်,Myint
 မြင့်,Myint
-မဥ္ဇူ,Myint Zu
 မဉ္ဇူ,Myint Zu
 မျိုး,Myo
 မြို့,Myoe
@@ -218,8 +214,7 @@ Burmese,English
 နန္ဒ,Nanda
 နန္ဒာ,Nandar
 နံ့,Nant
-နန့်,Nant
-နန့်,Nant
+နန်.,Nant
 နာ,Nar
 နောင်,Naung
 နော်,Naw
@@ -263,7 +258,6 @@ Burmese,English
 ဥတ္တ,Oatta
 ဥမ္မာ,Ohmar
 အုံး,Ohn
-ဦး,Oo
 ဦး,Oo
 ပ,Pa
 ပတ္တမြား,Padamyar
@@ -292,9 +286,7 @@ Burmese,English
 ပုံ့,Pont
 ပု,Pu
 ပွင့်,Pwint
-ပွင့်,Pwint
 ပြည့်,Pyae
-ပြည့်,Pyae
 ပြာ,Pyar
 ပြည်,Pyay
 ပြေ,Pyay
@@ -332,7 +324,7 @@ Burmese,English
 ဆည်းဆာ,Sesar
 မိုးစက်,Moe Set
 စက်,Set
-ဆက်,Set
+ဆက်,Hset
 ရှ,Sha
 ရှိန်,Shane
 ရှိန်း,Shane
@@ -345,7 +337,7 @@ Burmese,English
 ရွှန်း,Shun
 ဆွေ,Shwe
 ရွှေ,Shwe
-ရွေ,Shwe
+ရွေ,Yway
 ကေစီ,Kay Si
 စီ,Si
 စည်,Si
@@ -383,7 +375,6 @@ Burmese,English
 သန်း,Than
 သန္တာ,Thandar
 သန့်,Thant
-သန့်,Thant
 သာ,Thar
 သရဖီ,Tharaphi
 သရဖူ,Tharaphu
@@ -398,10 +389,8 @@ Burmese,English
 သိမ်း,Thein
 သိင်္ဂီ,Theingi
 သိမ့်,Theint
-သိမ့်,Theint
 သက်,Thet
 သီ,Thi
-သီိ,Thi
 သီတာ,Thidar
 သီဟ,Thiha
 သိုက်,Thike
@@ -410,7 +399,6 @@ Burmese,English
 သင်္ကြန်,Thingyan
 သင့်,Thint
 သဉ္ဇာ,Thinzar
-သဥ္ဇာ,Thinzar
 သင်ဇာ,Thinzar
 သီရိ,Thiri
 သစ်,Thit
@@ -429,18 +417,17 @@ Burmese,English
 တီ,Ti
 တိုက်,Tike
 တင်,Tin
-တင့်,Tint
 တင့်,Tint
 တိုး,Toe
 တုန်,Tone
 တွယ်တာ,Twaltar
 တွယ်,Twel
-သွယ်,Twel
+သွယ်,Thwel
 ဝ,Wa
 ဝသုန်,Wa Thone
 ဝေ,Wai
 ဝန,Wana
-ဝဏ္ဏ,Wanna
+ဝဏ္ဏ,Wana
 ဝါ,War
 ဝါး,War
 ဝသန်,Wathan
@@ -449,12 +436,10 @@ Burmese,English
 ဝင်,Win
 ဝင်း,Win
 ဝိုင်း,Wine
-ဝင့်,Wint
 ဝင့်,Wint
 ဝန်,Won
 ဝန်း,Wone
-ဝတ်,Wut
-ဝတ်,Wut
+ဝတ,Wut
 ယ,Ya
 ယျ,Ya
 ရ,Ya
@@ -479,7 +464,6 @@ Burmese,English
 ရိပ်,Yeik
 ရက်,Yet
 ရီ,Yi
-ယဉ်,Yin
 ယဥ်,Yin
 ရင်,Yin
 ရင့်,Yint
