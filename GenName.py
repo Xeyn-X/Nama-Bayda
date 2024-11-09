@@ -211,7 +211,7 @@ def nameGen():
 
 st.markdown("<div style='text-align:center;  padding-bottom: 30px;'><spam style='font-size:45px; font-weight:bold;'>Nama Bayda</spam><spam style='font-size:25px; font-weight:bold; color: gray;'> (နာမဗေဒ)</spam></div>", unsafe_allow_html=True)
 
-pages= {"Nama Bayda (နာမဗေဒ)":[st.Page(nameGen,title="Burmese Name Generator"), st.Page("./GenderDectector.py",title="Gender Detector"),st.Page("/Users/heinhtetarkarmg/Downloads/Converter.py",title="Burmese,English Converter"),
+pages= {"Nama Bayda (နာမဗေဒ)":[st.Page(nameGen,title="Burmese Name Generator"), st.Page("./GenderDectector.py",title="Gender Detector"),st.Page("./Converter.py",title="Burmese,English Converter"),
 st.Page("./NameMeaningExplainer.py",title="Name Meaning Explainer")]}
 pg = st.navigation(pages)
 pg.run()
