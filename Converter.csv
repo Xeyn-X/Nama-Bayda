@@ -1,5 +1,7 @@
 Burmese,English
+ဧရာ,Ayar
 အေ,A
+ဧ,A
 အဲ,Ae
 အဲ့,Aet
 ဧကရီ,Akari
@@ -11,9 +13,10 @@ Burmese,English
 အောင်,Aung
 အောင်း,Aung
 အံ့,Aunt
-ဧရာ,Ayar
+ဧပရယ်,April
 အေး,Aye
 ဘ,Ba
+ဗ,Ba
 ဗညား,Banyar
 ဘုန်း,Bhone
 ဘို,Bo
@@ -23,7 +26,7 @@ Burmese,English
 ချိန်,Chain
 ချမ်း,Chan
 ချော,Chaw
-ချိမ့်,Cheint
+ချိမ့်,Cheint
 ချယ်,Chel
 ခြယ်,Chel
 ချယ်ရီ,Cherry
@@ -141,6 +144,7 @@ Burmese,English
 ကြာ,Kyar
 ကျောက်,Kyauk
 ကျော်,Kyaw
+ကျော,Kyaw
 ကြော့,Kyawt
 ကျော့,Kyawt
 ကျေး,Kyay
@@ -166,8 +170,9 @@ Burmese,English
 လင်း,Lin
 လွန်း,Lonn
 လွန်,Lon
-လူ,Lu
 လု,Lu
+လူ,Lu
+ဠု,Lu
 လွင်,Lwin
 မ,Ma
 မာလာ,Malar
@@ -202,19 +207,19 @@ Burmese,English
 မြင်,Myin
 မြိုင်,Myine
 မြင့်,Myint
-မဉ္ဇူ,Myint Zu
+မဥ္ဇူ,Myint Zu
 မျိုး,Myo
 မြို့,Myoe
 န,Na
 နဒီ,Nadi
 နိုင်,Naing
 နယ်,Nal
-နမ့်,Nam
+နမ့်,Nant
 နန်း,Nan
 နန္ဒ,Nanda
 နန္ဒာ,Nandar
 နံ့,Nant
-နန်.,Nant
+နန့်,Nant
 နာ,Nar
 နောင်,Naung
 နော်,Naw
@@ -249,7 +254,7 @@ Burmese,English
 ငြိမ့်,Nyeint
 ညီ,Nyi
 ညို,Nyo
-ညွန့်,Nyunt
+ညွန့်,Nyunt
 အုပ်,Oak
 ဥ,Oak
 ဥတ္တရာ,Oak Tara
@@ -394,11 +399,12 @@ Burmese,English
 သီတာ,Thidar
 သီဟ,Thiha
 သိုက်,Thike
+သင့်,Thint
 သင်း,Thin
 သိုင်း,Thine
 သင်္ကြန်,Thingyan
 သင့်,Thint
-သဉ္ဇာ,Thinzar
+သဥ္ဇာ,Thinzar
 သင်ဇာ,Thinzar
 သီရိ,Thiri
 သစ်,Thit
@@ -439,7 +445,7 @@ Burmese,English
 ဝင့်,Wint
 ဝန်,Won
 ဝန်း,Wone
-ဝတ,Wut
+ဝတ်,Wut
 ယ,Ya
 ယျ,Ya
 ရ,Ya
