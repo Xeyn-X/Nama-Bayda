@@ -104,9 +104,9 @@ def load_names_from_csv(uploaded_file):
     return names_list
 
 # Load data from CSV files
-coverter_csv = '/Users/heinhtetarkarmg/Downloads/Converter.csv'
+coverter_csv = './Converter.csv'
 data = load_csv_data(coverter_csv)
-special_name = load_csv_data('/Users/heinhtetarkarmg/Downloads/SpecialName.csv')
+special_name = load_csv_data('./SpecialName.csv')
 
 
 #English to Burmese
