@@ -104,7 +104,7 @@ def load_names_from_csv(uploaded_file):
     return names_list
 
 # Load data from CSV files
-coverter_csv = './Converter.csv'
+coverter_csv = './Romanizer.csv'
 data = load_csv_data(coverter_csv)
 special_name = load_csv_data('./SpecialName.csv')
 
