@@ -149,6 +149,8 @@ def load_syllable_translations(csv_filename):
 
 # Function to convert an English name to Burmese using the translation dictionary
 def convert_name_to_burmese(english_name, translation_dict):
+    # Convert list of names to a single string if needed
+    english_name = " ".join(english_name) if isinstance(english_name, list) else english_name
     english_name = capitalize_first_letter(english_name)
     # Split the English name into parts (e.g., "Kaung Htet San" -> ["Kaung", "Htet", "San"])
     name_parts = english_name.split()
