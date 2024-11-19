@@ -5,7 +5,7 @@
 ***နိုဝင်ဘာလ၊ ၂၄ရက်***
 
 ---
-***Paper အပြည့်အစုံအား https://docs.google.com/document/d/1WOhaStRVrdnoBiJTP_x7PKUSIM4tM9_aUE2IEUp0dPM/edit?tab=t.0 တွင် ဖော်ပြထားသည်။**
+***Paper အပြည့်အစုံအား https://docs.google.com/document/d/1WOhaStRVrdnoBiJTP_x7PKUSIM4tM9_aUE2IEUp0dPM/edit?tab=t.0 တွင် ဖော်ပြထားသည်။***
 ---
 
 ## Abstract
