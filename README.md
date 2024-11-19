@@ -30,7 +30,7 @@
 
 ## Methodology
 
-**1. Burmese Name Generator**
+### 1. Burmese Name Generator
 	နာမဗေဒ မှ Burmese name generator ကို Traditional method ဖြစ်သော Recurrent Neural Network (RNN) ကိုသုံးပြီး တည်ဆောက်ထားပါသည်။ တည်ဆောက်ပုံအဆင့်ဆင့်မှာ အောက်ပါအတိုင်း ဖြစ်ပြီး Model အား Train ထားသည့် Coding ကိုလည်း Sharing လုပ်ထားပေးပါသည်။
 Kaggle: https://www.kaggle.com/code/heinhtetahkarmg/burmese-name-generator
 
